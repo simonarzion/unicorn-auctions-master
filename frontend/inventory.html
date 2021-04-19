@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unicorn Auctions - Inventory</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Font awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+      integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Top header section -->
+
+    <header class="header">
+      <div class="header-inner">
+        <!-- Logo -->
+
+        <a href="/" class="header-brand">Unicorn auctions</a>
+        <!-- Header right section -->
+
+        <div class="header-menu">
+          <input type="text" placeholder="Search..." />
+          <div class="divisor"></div>
+          <div class="notifications">
+            <i class="fas fa-bell"></i>
+            <span class="notifications-active"></span>
+          </div>
+          <div class="divisor"></div>
+          <img src="gray-bg.jpg" class="profile-img" alt="Profile image" />
+        </div>
+      </div>
+    </header>
+
+    <!-- Wrapper -->
+
+    <main class="wrapper">
+      <!-- Left side nav -->
+
+      <aside class="aside">
+        <ul class="nav-items">
+          <li>
+            <a href="#">
+              <i class="fas fa-user-circle nav-icon"></i>Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="pricing.html">
+              <i class="fas fa-table nav-icon"></i>IQ Pricing
+            </a>
+          </li>
+          <li>
+            <a href="correlation.html"
+              ><i class="fas fa-money-check nav-icon"></i>Correlation</a
+            >
+          </li>
+          <li class="nav-active">
+            <a href="inventory.html"
+              ><i class="fas fa-tablet nav-icon"></i>Inventory</a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-user nav-icon"></i>My Profile</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-lock nav-icon"></i>Change Password</a>
+          </li>
+        </ul>
+        <hr />
+        <footer>
+          <h3>Contact Information</h3>
+          <p><i class="fas fa-envelope nav-icon"></i>john.doe@gmail.com</p>
+          <p><i class="fas fa-tablet nav-icon"></i>(000) 000 0000</p>
+        </footer>
+      </aside>
+
+      <!-- Inventory -->
+
+      <section class="content">
+        <h2 class="content-title">Inventory</h2>
+        <p class="content-path">
+          Dashboard <i class="fas fa-chevron-right"></i> <b>Inventory</b>
+        </p>
+
+        <!-- Correlation list -->
+
+        <div class="content-container">
+          <!-- Content header -->
+
+          <div class="content-top">
+            <h3>Product details</h3>
+            <div>
+              <label for="sort">Sorted by</label>
+              <select name="sort" id="sort">
+                <option value="recency">Recency</option>
+                <option value="recency">Recency</option>
+                <option value="recency">Recency</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- List -->
+
+          <div class="content-list">
+            <table>
+              <tr>
+                <th>#</th>
+                <th>Image</th>
+                <th>Whiskey Name</th>
+                <th>Quantity</th>
+                <th>Action</th>
+              </tr>
+
+              <tr>
+                <td>1</td>
+                <td>
+                  <img
+                    src="gray-bg.jpg"
+                    alt="product image"
+                    class="list-image"
+                  />
+                </td>
+                <td>Whiskey Name 1</td>
+                <td>20</td>
+                <td>
+                  <div class="btn-group">
+                    <button class="inventory-btn-add">
+                      <i class="fas fa-plus"></i>
+                    </button>
+                    <button class="inventory-btn-edit">
+                      <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="inventory-btn-delete">
+                      <i class="fas fa-trash"></i>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>
+                  <img
+                    src="gray-bg.jpg"
+                    alt="product image"
+                    class="list-image"
+                  />
+                </td>
+                <td>Whiskey Name 2</td>
+                <td>30</td>
+                <td>
+                  <button class="inventory-btn-add">
+                    <i class="fas fa-plus"></i>
+                  </button>
+                  <button class="inventory-btn-edit">
+                    <i class="fas fa-edit"></i>
+                  </button>
+                  <button class="inventory-btn-delete">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>
+                  <img
+                    src="gray-bg.jpg"
+                    alt="product image"
+                    class="list-image"
+                  />
+                </td>
+                <td>Whiskey Name 3</td>
+                <td>40</td>
+                <td>
+                  <button class="inventory-btn-add">
+                    <i class="fas fa-plus"></i>
+                  </button>
+                  <button class="inventory-btn-edit">
+                    <i class="fas fa-edit"></i>
+                  </button>
+                  <button class="inventory-btn-delete">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+            </table>
+
+            <!-- Modal -->
+            <!-- To show it add display:block -->
+            <div class="add-modal-container">
+              <div class="add-modal">
+                <div class="add-modal-top">
+                  <h3>Add Product Details</h3>
+                  <button class="add-modal-close">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+                <form class="add-modal-form">
+                  <label for="name">Whiskey Name</label>
+                  <input type="text" name="name" id="name" />
+                  <label for="quantity">Quantity</label>
+                  <input type="text" name="quantity" id="quantity" />
+                  <label for="quantity">Upload Whiskey Image</label>
+                  <input type="file" name="quantity" id="quantity" />
+                </form>
+                <div class="add-modal-btn">
+                  <button class="btn-close">Close</button>
+                  <button class="btn-save">Save Changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+
+          <div class="content-pagination">
+            <span>Showing 1 to 4 of 57 entries</span>
+            <div>
+              <button>Previous</button>
+              <button class="btn-active">1</button>
+              <button>2</button>
+              <button>3</button>
+              <button>4</button>
+              <button>5</button>
+              <button>6</button>
+              <button>Next</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+
+      <footer class="footer">
+        <p>Copyright &copy; Unicorn Auctions. All rights reserved</p>
+        <div>
+          <a href="#">About</a>
+          <a href="#">Support</a>
+          <a href="#">Contact us</a>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

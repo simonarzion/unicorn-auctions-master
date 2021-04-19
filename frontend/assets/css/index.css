@@ -1,0 +1,481 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+/* general styles */
+
+table {
+  width: 100%;
+}
+
+input[type="checkbox"] {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.text-bold {
+  font-weight: 500;
+}
+
+.total-price {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+  display: block;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.dropdown-title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 20px;
+}
+
+/* Header */
+
+.header-section h3 {
+  text-align: right;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.header-path {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  color: #ccc;
+}
+
+.header-path-group span {
+  padding: 0 20px;
+  margin: 10px 0;
+  display: inline-block;
+}
+
+.header-path-group span:nth-child(1) {
+  border-right: 1px solid white;
+}
+
+@media screen and (max-width: 568px) {
+  .header-path {
+    flex-direction: column;
+  }
+}
+
+/* Invoice */
+.invoice-section h2 {
+  padding: 10px;
+  font-weight: 500;
+}
+
+.invoice-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  flex-wrap: wrap;
+  margin: 20px auto 0;
+}
+
+.bill,
+.ship {
+  width: 40%;
+  padding: 10px;
+}
+
+.bill p,
+.ship p {
+  padding: 5px 0;
+}
+
+#textarea-shipping,
+#textarea-billing {
+  width: 100%;
+  min-height: 100px;
+  resize: none;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+#change-billing,
+#change-shipping {
+  cursor: pointer;
+}
+
+.bill-inner,
+.ship-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.invoice-details {
+  /* display: grid;
+  grid-template-columns: repeat(12, minmax(80px, 1fr));
+  margin: 40px auto; */
+  overflow: auto;
+  width: 90%;
+  margin: 40px auto;
+  /* white-space: nowrap; */
+}
+/* 
+
+.invoice-details .lot {
+  grid-column: 1 / 2;
+}
+
+.invoice-details .item {
+  grid-column: 2 / 6;
+}
+
+.invoice-details .item p {
+  white-space: normal;
+}
+
+.invoice-details .quantity {
+  grid-column: 6 / 11;
+}
+
+.invoice-details .hammer-price {
+  grid-column: 11 / 13;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.invoice-details .total-section {
+  grid-column: 1 / 11;
+  margin: 40px 0 0;
+}
+
+.invoice-details .total-price-section {
+  margin: 40px 0 0;
+  grid-column: 11 / 13;
+  border-bottom: 1px solid #000;
+}
+
+.invoice-text {
+  width: 90%;
+  margin: auto;
+}
+
+.invoice-text span {
+  margin: 0 10px;
+} */
+
+.price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+/* 
+.invoice-details .lot p,
+.invoice-details .item p,
+.invoice-details .quantity p,
+.invoice-details .hammer-price div,
+.invoice-details .total-section p,
+.invoice-details .total-price-section div {
+  padding: 5px 0;
+}
+
+.invoice-details .total-number {
+  display: flex;
+  grid-column: 1 / 13;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+} */
+
+@media screen and (max-width: 768px) {
+  .bill,
+  .ship {
+    margin: 10px auto;
+    width: 100%;
+  }
+}
+
+.invoice-table-top {
+  margin: auto;
+  white-space: normal;
+}
+
+.invoice-table-top tr th,
+.invoice-table-top tr td {
+  padding: 20px 0;
+}
+
+.invoice-table-top tr th:last-child {
+  white-space: nowrap;
+}
+
+.invoice-table-top tr th:last-child,
+.invoice-table-top tr td:last-child {
+  width: 100px;
+}
+
+.invoice-table-top tr th:nth-child(2),
+.invoice-table-top tr th:nth-child(1) {
+  text-align: left;
+}
+
+.invoice-table-top tr th:nth-child(2),
+.invoice-table-top tr td:nth-child(2) {
+  min-width: 200px;
+}
+
+.invoice-table-top tr th:nth-child(3),
+.invoice-table-top tr td:nth-child(3) {
+  min-width: 200px;
+}
+
+.invoice-table-top tr td:nth-child(3) {
+  text-align: center;
+}
+
+.invoice-table-bot {
+  margin: auto;
+  white-space: nowrap;
+}
+
+.invoice-table-bot tr td {
+  padding: 5px 0;
+}
+
+.invoice-table-bot tr td:nth-child(2) {
+  width: 113px;
+}
+
+.invoice-table-bot tr:last-child td:last-child {
+  border-top: 1px solid #000;
+}
+/* dropdown */
+
+.dropdown-section {
+  width: 90%;
+  margin: 0 auto 50px;
+}
+
+.dropdown-section .dropdown-toggle .dropdown-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: flex-start;
+  border-top: 1px solid #000;
+}
+
+.dropdown-section .dropdown-toggle .dropdown-header .header-arrow {
+  transition: all 0.6s ease;
+}
+
+.dropdown-section .dropdown-toggle .dropdown-header .header-arrow-active {
+  transform: rotate(-180deg);
+  transition: all 0.6s ease;
+}
+
+.table-container,
+.shipping {
+  overflow: auto;
+}
+
+.dropdown-section .dropdown-toggle .dropdown-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.7s ease;
+}
+
+/* offers dropdown */
+
+.dropdown-section .dropdown-toggle .offers table tr td {
+  white-space: nowrap;
+}
+
+.dropdown-section .dropdown-toggle .offers table td,
+.dropdown-section .dropdown-toggle .offers table th {
+  padding: 10px;
+}
+
+.dropdown-section .dropdown-toggle .offers table {
+  width: 100%;
+}
+
+.dropdown-section .offers > p,
+.dropdown-section .offers span {
+  margin: 10px 0 10px auto;
+}
+
+.recalculate-text-total {
+  border-top: 1px solid #777;
+  width: fit-content;
+  margin-left: auto;
+}
+
+/* shipping dropdown */
+
+.dropdown-section .dropdown-toggle .shipping table td,
+.dropdown-section .dropdown-toggle .shipping table th {
+  white-space: nowrap;
+  padding: 10px;
+}
+
+.dropdown-section .dropdown-toggle .shipping table td select,
+.dropdown-section .dropdown-toggle .payment table td select {
+  padding: 10px;
+}
+
+.dropdown-section
+  .dropdown-toggle
+  .shipping
+  table
+  td:last-child
+  .price-container {
+  width: 50%;
+  margin-left: auto;
+}
+
+.shipping-calendar-storage,
+.shipping-calendar-local {
+  display: none;
+}
+.shipping-calendar-storage input,
+.shipping-calendar-local input {
+  margin: 10px;
+  padding: 10px;
+}
+
+.storage-months-th,
+.storage-months {
+  display: none;
+}
+
+/* breakage dropdown */
+
+.dropdown-section .dropdown-toggle .breakage .breakage-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+/* payment dropdown */
+
+.dropdown-section .dropdown-toggle .payment .table-container th,
+.dropdown-section .dropdown-toggle .payment .table-container td {
+  padding: 10px;
+}
+
+.dropdown-section .dropdown-toggle .payment span {
+  margin: 20px 0;
+  display: inline-block;
+}
+
+/* add new card */
+
+.add-new-card {
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.add-new-card > input {
+  width: 50%;
+}
+
+.add-new-card input {
+  padding: 10px;
+}
+
+.add-new-card-inner {
+  display: flex;
+}
+
+.add-new-card-input {
+  display: flex;
+  width: 25%;
+  flex-direction: column;
+}
+
+/* add new ach */
+
+.add-new-ach {
+  display: none;
+}
+
+.add-new-ach-input {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+
+.add-new-ach-input input {
+  padding: 10px;
+}
+
+.dropdown-submit-btn {
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #777;
+  border: 1px solid #777;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 10px;
+  border-radius: 2px;
+  outline: none;
+  transition: all 0.5s;
+}
+
+.dropdown-submit-btn:hover {
+  cursor: pointer;
+  background-color: #333;
+  color: #eee;
+}
+
+.dropdown-submit-btn:active {
+  background-color: #000;
+  color: #fff;
+}
+
+/* promo code */
+
+.promo-code,
+.promo-code-total-discount,
+.promo-code-discount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  margin-left: auto;
+}
+
+.promo-code input {
+  padding: 10px;
+  font-size: 1rem;
+  width: 100px;
+}
+
+@media screen and (max-width: 320px) {
+  .promo-code,
+  .promo-code-total-discount,
+  .promo-code-total {
+    width: 100%;
+  }
+}

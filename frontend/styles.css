@@ -1,0 +1,501 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Montserrat:wght@300;400;500;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #dedede;
+  min-height: 100vh;
+}
+
+/* General styles */
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.content {
+  grid-row: 1 / 2;
+  grid-column: 4 / 13;
+}
+
+.aside {
+  grid-row: 1 / 3;
+  grid-column: 1 / 4;
+}
+
+/* Header */
+
+.header {
+  background-color: #fff;
+  width: 100%;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  margin: auto 20px;
+}
+
+.header a {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: bolder;
+  text-decoration: none;
+  color: #000;
+  font-family: "Bree Serif", serif;
+}
+
+.header .header-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
+  gap: 20px;
+}
+
+.header .header-menu .notifications {
+  position: relative;
+  cursor: pointer;
+}
+
+.header .header-menu .notifications .notifications-active {
+  position: absolute;
+  top: -3px;
+  right: 0;
+  background-color: red;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.header .header-menu i {
+  font-size: 1.5rem;
+  color: #757575;
+}
+
+.header .header-menu input {
+  padding: 10px;
+  outline: none;
+  border: 1px solid #d8d8d8;
+}
+
+.header .header-menu .profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.divisor {
+  background-color: #e0e0e0;
+  height: 100%;
+  width: 1px;
+}
+
+/* Aside nav */
+
+.aside {
+  background-color: #000;
+  min-height: calc(100vh - 80px);
+}
+
+.aside .nav-items {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.aside .nav-items li {
+  border-radius: 2px;
+  margin: 5px 0;
+  transition: background 0.3s ease;
+}
+
+.aside .nav-items li:hover {
+  cursor: pointer;
+  background-color: #323232;
+}
+
+.aside .nav-items li a {
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  display: inline-block;
+}
+
+.aside .nav-icon {
+  margin-right: 10px;
+  color: #fff;
+}
+
+.aside .nav-active {
+  background: #323232;
+}
+
+.aside footer {
+  padding: 10px;
+}
+
+.aside footer h3 {
+  color: #fff;
+  padding: 10px;
+}
+
+.aside footer p {
+  color: #fff;
+  padding: 5px 10px;
+  white-space: pre;
+}
+
+/* Content */
+
+.content {
+  padding: 20px;
+}
+
+.content .content-title {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  font-weight: 500;
+  color: #1c2838;
+}
+
+.content .content-path {
+  padding: 0 0 20px;
+  color: #777;
+}
+
+.content .content-path i {
+  padding: 20px 0;
+  color: #777;
+}
+
+.content .content-path b {
+  padding: 20px 0;
+  color: #1c2838;
+}
+
+.list-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.content-container {
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Products details header */
+
+.content-top {
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+}
+
+.content-top h3 {
+  color: #fff;
+}
+
+.content-top label {
+  color: #fff;
+  margin-right: 20px;
+  font-weight: 700;
+}
+
+.content-top select {
+  padding: 5px;
+  border: none;
+  background: #fff;
+  outline: none;
+}
+
+/* Product details */
+
+.content-list {
+  overflow-x: auto;
+}
+
+.content-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.content-list tr th {
+  color: #1c2838;
+}
+
+.content-list td,
+.content-list th {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.content-list td a {
+  color: #379eff;
+  font-weight: 700;
+}
+
+/* Inventory.html styles */
+.content-list table td .inventory-btn-add i,
+.content-list table td .inventory-btn-edit i,
+.content-list table td .inventory-btn-delete i {
+  padding: 10px;
+  color: #fff;
+}
+
+.content-list table td .inventory-btn-add {
+  background: #44b939;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+.content-list table td .inventory-btn-add:hover {
+  background: #2cb320;
+  cursor: pointer;
+}
+
+.content-list table td .inventory-btn-edit {
+  outline: none;
+  background: #000;
+  border-radius: 2px;
+  transition: background 0.3s ease;
+  border: none;
+}
+
+.content-list table td .inventory-btn-edit:hover {
+  cursor: pointer;
+  background: #222222;
+}
+
+.content-list table td .inventory-btn-delete {
+  outline: none;
+  border: none;
+  background: #ff2e2e;
+  transition: background 0.3s ease;
+  border-radius: 2px;
+}
+
+.content-list table td .inventory-btn-delete:hover {
+  cursor: pointer;
+  background: #ff0000;
+}
+
+.content-list table td .btn-group {
+  white-space: nowrap;
+}
+
+/* Modal */
+
+.content-list .add-modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #00000096;
+  width: 100%;
+  height: 100vh;
+  display: none;
+}
+
+.content-list .add-modal {
+  background-color: #ffffff;
+  width: 50%;
+  margin: 40px auto 0;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+
+.add-modal-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px 20px;
+}
+
+.add-modal-close {
+  border: none;
+  outline: none;
+  padding: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.add-modal-close i {
+  color: #777;
+}
+
+.add-modal-form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.add-modal-form input {
+  padding: 10px;
+  border: 1px solid #d8d8d8;
+  margin: 10px 0;
+}
+
+.add-modal-btn {
+  text-align: right;
+  padding: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.add-modal-btn .btn-close {
+  background: #ff2e2e;
+  color: #fff;
+  font-weight: 500;
+  padding: 10px;
+  outline: none;
+  border: none;
+  transition: background 0.3s ease;
+  border-radius: 2px;
+}
+
+.add-modal-btn .btn-close:hover {
+  background: #ff0000;
+  cursor: pointer;
+}
+
+.add-modal-btn .btn-save {
+  background: #000;
+  color: #fff;
+  font-weight: 500;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  transition: background 0.3s ease;
+}
+
+.add-modal-btn .btn-save:hover {
+  background: #222222;
+  cursor: pointer;
+}
+
+/* IQ Pricing.html styles */
+
+.content-list table .pricing-verified-btn {
+  background-color: #44b939;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  padding: 10px;
+}
+
+.content-list table .pricing-verified-btn:hover {
+  background-color: #2cb320;
+  color: #fff;
+  cursor: pointer;
+}
+/* Pagination */
+
+.content-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+}
+
+.content-pagination span {
+  font-size: 0.9rem;
+  color: #777;
+  padding: 10px 0;
+  font-weight: 500;
+}
+
+.content-pagination div button {
+  padding: 8px 12px;
+  border: 1px solid #e0e0e0;
+  background: transparent;
+  font-weight: 700;
+  color: #777;
+  border-radius: 5px;
+  transition: background, color 0.3s ease;
+}
+
+.content-pagination div .btn-active {
+  background-color: #000;
+  color: #fff;
+}
+
+.content-pagination div button:hover {
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+}
+
+/* Footer */
+
+.footer {
+  grid-row: 2 / 3;
+  grid-column: 4 / 13;
+  align-self: flex-end;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  font-size: 0.8rem;
+}
+
+.footer div a {
+  text-decoration: none;
+  padding: 0 10px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+/* Media querys */
+
+@media screen and (max-width: 992px) {
+  .content-pagination {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer div a {
+    padding-left: 0;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 578px) {
+  .header-inner {
+    flex-direction: column;
+  }
+  .header-menu input {
+    width: 40%;
+  }
+  .content-top {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+}

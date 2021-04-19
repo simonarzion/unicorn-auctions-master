@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/index.css" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+      integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+      crossorigin="anonymous"
+    />
+
+    <!-- date librarie -->
+    <link
+      rel="stylesheet"
+      href="assets/libs/css/jquery.datetimepicker.min.css"
+    />
+  </head>
+  <body>
+    <!-- header -->
+
+    <header class="header-section">
+      <img src="assets/images/logo-dashboard.png" alt="logo" />
+      <div class="header-path">
+        <div class="header-path-group">
+          <span>My Profile</span>
+          <span>Payment Portal</span>
+        </div>
+        <div class="header-path-group">
+          <span>Account</span>
+          <span>A.J.Heindel</span>
+        </div>
+      </div>
+      <h3>Payment Portal</h3>
+    </header>
+
+    <!-- invoice -->
+
+    <section class="invoice-section">
+      <h2>Invoice</h2>
+      <div class="invoice-inner">
+        <div class="bill">
+          <div class="bill-inner">
+            <p class="text-bold">Bill to:</p>
+            <span class="text-underline" id="change-billing"
+              >change billing adress</span
+            >
+          </div>
+          <textarea name="" id="textarea-billing" disabled>
+5547 N Ravenswood, Unit 106
+A.J Heindel
+Chicago, IL 60640</textarea
+          >
+        </div>
+        <div class="ship">
+          <div class="ship-inner">
+            <p class="text-bold">Ship to:</p>
+            <span class="text-underline" id="change-shipping"
+              >change shipping adress</span
+            >
+          </div>
+          <textarea name="" id="textarea-shipping" disabled>
+5547 N Ravenswood, Unit 106
+A.J Heindel
+Chicago, IL 60640</textarea
+          >
+        </div>
+      </div>
+
+      <div class="invoice-details">
+        <div class="invoice-text text-right">Invoice #: <span>1</span></div>
+        <!-- first section -->
+
+        <!-- <div class="lot">
+          <p>Lot #</p>
+          <p>205</p>
+          <p>667</p>
+          <p>789</p>
+          <p>1034</p>
+        </div>
+
+        <div class="item">
+          <p>Item</p>
+          <p>
+            Pappy Van Wnkle 23 Year
+          </p>
+          <p>Elmer T. Lee Bourbon</p>
+          <p>Blanton's Single Barrel Bourbon</p>
+          <p>Hancock's President's Reserve</p>
+        </div>
+
+        <div class="quantity">
+          <p>qty</p>
+          <p class="quantity-number">1</p>
+          <p class="quantity-number">1</p>
+          <p class="quantity-number">1</p>
+          <p class="quantity-number">1</p>
+        </div>
+
+        <div class="hammer-price">
+          <div>Hammer Price</div>
+          <div class="price-container"><b>$</b> 2,000.00</div>
+          <div class="price-container"><b>$</b> 250.00</div>
+          <div class="price-container"><b>$</b> 125.00</div>
+          <div class="price-container"><b>$</b> 85.00</div>
+        </div>
+
+        <div class="total-section">
+          <p>Total Premiums:</p>
+          <p>Total Shipping Costs:</p>
+          <p>Total Sales Tax:</p>
+          <p>Total Discounts:</p>
+        </div>
+
+        <div class="total-price-section">
+          <div class="price-container"><b>$</b> 369.00</div>
+          <div class="price-container"><b>$</b> 55.00</div>
+          <div class="price-container"><b>$</b> 153.75</div>
+          <div class="price-container"><b>$</b> - </div>
+        </div>
+
+        <div class="total-number">
+          <h3 class="total-price">Total:</h3>
+          <h3 class="total-price">
+            $<span class="details-total-price text-bold">3,512.13</span>
+          </h3>
+        </div> -->
+        <table class="invoice-table-top">
+          <tr>
+            <th>Lot #</th>
+            <th>Item</th>
+            <th>qty</th>
+            <th>Hammer Price</th>
+          </tr>
+          <tr>
+            <td>205</td>
+            <td>Pappy Van Wnkle 23 Year</td>
+            <td class="quantity-number">1</td>
+            <td>
+              <div class="price-container"><b>$</b>2,000.00</div>
+            </td>
+          </tr>
+          <tr>
+            <td>667</td>
+            <td>Elmer T. Lee Bourbon lorem</td>
+            <td class="quantity-number">1</td>
+            <td>
+              <div class="price-container"><b>$</b> 250.00</div>
+            </td>
+          </tr>
+          <tr>
+            <td>789</td>
+            <td>Hancock's President's Reserve</td>
+            <td class="quantity-number">1</td>
+            <td>
+              <div class="price-container"><b>$</b> 125.00</div>
+            </td>
+          </tr>
+          <tr>
+            <td>1034</td>
+            <td>Blanton's Single Barrel Bourbon</td>
+            <td class="quantity-number">1</td>
+            <td>
+              <div class="price-container"><b>$</b> 85.00</div>
+            </td>
+          </tr>
+        </table>
+
+        <table class="invoice-table-bot">
+          <tr>
+            <th></th>
+            <th></th>
+          </tr>
+          <tr>
+            <td>Total Premiums:</td>
+            <td>
+              <div class="price-container"><b>$</b> 369.00</div>
+            </td>
+          </tr>
+          <tr>
+            <td>Total Shipping Costs:</td>
+            <td>
+              <div class="price-container"><b>$</b> 55.00</div>
+            </td>
+          </tr>
+          <tr>
+            <td>Total Sales Tax:</td>
+            <td>
+              <div class="price-container"><b>$</b> 153.75</div>
+            </td>
+          </tr>
+          <tr>
+            <td>Total Discounts:</td>
+            <td>
+              <div class="price-container"><b>$</b> - </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h3 class="total-price">Total:</h3>
+            </td>
+            <td>
+              <div class="price-container text-bold">
+                $<span class="details-total-price text-bold">3,512.13</span>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <!-- dropdown -->
+
+    <section class="dropdown-section">
+      <!-- offers dropdown -->
+
+      <div class="dropdown-toggle">
+        <div class="dropdown-header">
+          <span class="header-arrow"><i class="fas fa-chevron-down"></i></span>
+          <h4 class="dropdown-title">Second chance offers:</h4>
+        </div>
+
+        <!-- menu -->
+
+        <div class="dropdown-menu offers">
+          <p>
+            At the end of the auction, if any lots are passed, we always offer
+            the top bidders the opportuinity to purchase the lots at the reserve
+            price, if they'd like. There is no obligation, but as the top bider
+            (albeit below reserve), you have the right of refusal to purchase
+            the following items at their reserve price:
+          </p>
+          <span class="text-bold"
+            >click the checkbox to add items to your invoice</span
+          >
+
+          <div class="table-container">
+            <table>
+              <tr>
+                <th></th>
+                <th class="text-left">Item</th>
+                <th>qty</th>
+                <th>Bottle Size</th>
+                <th>Price</th>
+                <th>Premium</th>
+                <th>Taxes</th>
+                <th>Total</th>
+              </tr>
+
+              <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name="checkbox"
+                    class="checkbox-offers"
+                    value="2,798.75"
+                  />
+                </td>
+                <td>Lot 101: Pappy Van Winkle 23 Year Bourbon</td>
+                <td class="quantity-container">1</td>
+                <td class="text-center">32oz</td>
+                <td>
+                  <div class="price-container"><b>$</b>2,300.00</div>
+                </td>
+                <td>
+                  <div class="price-container"><b>$</b>345.00</div>
+                </td>
+                <td>
+                  <div class="price-container"><b>$</b>143.75</div>
+                </td>
+                <td class="price-container text-bold">
+                  <b class="text-bold">$</b>2,788.75
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name="checkbox"
+                    class="checkbox-offers"
+                    value="434.38"
+                  />
+                </td>
+                <td>Lot 230: Elmer T. Lee Bourbon</td>
+                <td class="quantity-container">1</td>
+                <td class="text-center">32oz</td>
+                <td>
+                  <div class="price-container"><b>$</b>350.00</div>
+                </td>
+                <td>
+                  <div class="price-container"><b>$</b>52.50</div>
+                </td>
+                <td>
+                  <div class="price-container"><b>$</b>21.88</div>
+                </td>
+                <td>
+                  <div class="price-container text-bold">
+                    <b class="text-bold">$</b>424.38
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name="checkbox"
+                    class="checkbox-offers"
+                    value="76.69"
+                  />
+                </td>
+                <td>Lot 549: Eagle Rare Bourbon</td>
+                <td class="quantity-container">1</td>
+                <td class="text-center">32oz</td>
+
+                <td>
+                  <div class="price-container"><b>$</b>55.00</div>
+                </td>
+                <td>
+                  <div class="price-container"><b>$</b>8.25</div>
+                </td>
+                <td>
+                  <div class="price-container"><b>$</b>3.44</div>
+                </td>
+                <td>
+                  <div class="price-container text-bold">
+                    <b class="text-bold">$</b>66.69
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <span class="recalculate-text-top text-right text-bold"></span>
+          <span class="recalculate-text text-right text-bold"></span>
+          <span class="recalculate-text-total text-right text-bold"></span>
+        </div>
+      </div>
+
+      <!-- breakage dropdown -->
+
+      <div class="dropdown-toggle">
+        <div class="dropdown-header">
+          <span class="header-arrow"><i class="fas fa-chevron-down"></i></span>
+          <h4 class="dropdown-title">Breakage Insurance:</h4>
+        </div>
+        <div class="dropdown-menu breakage">
+          <p>
+            We also offer a breakage insurance service for our clients who need
+            to ship their bottles, for an additional cost of 3% (of total hammer
+            price). If the bottle is broken in transit/delivered as a total
+            loss, we'll reimburse the value. For more info, see
+            www.unicornauctions.com/shipping.
+          </p>
+          <div class="breakage-items">
+            <span class="text-bold"
+              >click the checkbox to add breakage insurance on your
+              shipment</span
+            >
+            <span class="text-bold">total insurance cost</span>
+          </div>
+          <div class="table-container">
+            <table>
+              <td>
+                <input
+                  class="breakage-checkbox"
+                  type="checkbox"
+                  name="checkbox"
+                  value="105.36"
+                />
+              </td>
+              <td>Add Breakage Insurance</td>
+              <td>
+                <div class="price-container"><b>$</b> 105.36</div>
+              </td>
+            </table>
+            <span class="breagake-total text-bold text-right"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- shipping dropdown -->
+
+      <div class="dropdown-toggle">
+        <div class="dropdown-header">
+          <span class="header-arrow"><i class="fas fa-chevron-down"></i></span>
+          <h4 class="dropdown-title">Shipping and Delivery Options:</h4>
+        </div>
+
+        <!-- menu -->
+
+        <div class="dropdown-menu shipping">
+          <table>
+            <tr>
+              <th class="text-left">Inv #</th>
+              <th class="text-left">method</th>
+              <th>total btl qty</th>
+              <th>per bottle</th>
+              <th class="storage-months-th">months</th>
+              <th class="text-right text-bold">total method cost</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>
+                <select class="shipping-select">
+                  <option>Standar (Ground) Shipping</option>
+                  <option>Expedited (Air) Shipping</option>
+                  <option>Local Pickup</option>
+                  <option>Storage</option>
+                </select>
+              </td>
+              <td class="text-center shipping-total-quantity"></td>
+              <td>
+                <div class="price-container">
+                  <b>$</b><span class="shipping-per-bottle">11.00</span>  
+                </div>
+              </td>
+              <td class="storage-months text-center">0</td>
+              <td>
+                <div class="price-container text-bold text-right">
+                  <b>$</b><span class="shipping-total"></span> 
+                </div>
+              </td>
+            </tr>
+          </table>
+          <div class="shipping-calendar-storage">
+            <label for="calendar">Pickup Date:</label>
+            <input type="date" class="storage-calendar" name="calendar" />
+          </div>
+          <div class="shipping-calendar-local">
+            <label for="calendar">Pickup Date:</label>
+            <!-- <input type="datetime-local" name="calendar" /> -->
+            <input type="text" id="datetime" />
+          </div>
+        </div>
+      </div>
+
+      <!-- payment dropdown -->
+
+      <div class="dropdown-toggle">
+        <div class="dropdown-header">
+          <span class="header-arrow"><i class="fas fa-chevron-down"></i></span>
+          <h4 class="dropdown-title">Payment Method:</h4>
+        </div>
+        <div class="dropdown-menu payment">
+          <p>
+            Payment can be made in one of two ways: <br />
+            1) We can set up a credit or debit card transaction through Stripe,
+            our payment processor <br />- or -<br />
+            2) You can pay via ACH transfer
+          </p>
+          <span class="text-bold"
+            >Clients who pay via ACH Transfer receive a 1% discount on this
+            invoice, in addition to a 1% discount credit for all purchases in
+            any future auction within a calender year</span
+          >
+          <div class="table-container">
+            <table>
+              <tr>
+                <th class="text-left">Inv #</th>
+                <th class="text-left">payment method</th>
+                <th class="text-right">TOTAL</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>
+                  <select class="card-select">
+                    <option>Card ending in *9999</option>
+                    <option>ACH Account ending in *9999</option>
+                    <option>Add New Card</option>
+                    <option>Add New ACH</option>
+                  </select>
+                </td>
+                <td class="text-right total-price payment-total"></td>
+              </tr>
+            </table>
+
+            <!-- promo code -->
+
+            <div class="promo-code-discount text-right">
+              <p>Discount:</p>
+              <span class="discount">$0.00</span>
+            </div>
+
+            <div class="text-right promo-code">
+              <label for="promo-code">Promo Code:</label>
+              <input type="text" name="promo-code" id="promo-code" />
+            </div>
+
+            <div class="promo-code-total-discount text-right">
+              <p>Total W/ Discount:</p>
+              <span class="total-discount text-bold"></span>
+            </div>
+
+            <!-- add new card -->
+
+            <div class="add-new-card">
+              <!-- number -->
+
+              <label for="add-card-number">Card Number:</label>
+              <input
+                type="text"
+                name="add-card-number"
+                placeholder="1234 5678 9012 3456"
+              />
+              <div class="add-new-card-inner">
+                <!-- expiration -->
+
+                <div class="add-new-card-input">
+                  <label for="add-card-expiration">Expiration Date:</label>
+                  <input
+                    type="text"
+                    name="add-card-expiration"
+                    placeholder="01/19"
+                  />
+                </div>
+
+                <!-- code -->
+
+                <div class="add-new-card-input">
+                  <label for="add-card-code">Security Code:</label>
+                  <input type="text" name="add-card-code" placeholder="***" />
+                </div>
+              </div>
+            </div>
+
+            <!-- add new ach -->
+            <div class="add-new-ach">
+              <div class="add-new-ach-input">
+                <label for="routing-number">Routing Number</label>
+                <input type="text" name="routing-number" />
+              </div>
+              <div class="add-new-ach-input">
+                <label for="account-number">Account Number</label>
+                <input type="text" name="account-number" />
+              </div>
+            </div>
+
+            <!-- submit button -->
+            <div class="text-right">
+              <button class="dropdown-submit-btn">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/libs/js/jquery.js"></script>
+    <script src="assets/libs/js/jquery.datetimepicker.full.js"></script>
+    <script>
+      $("#datetime").datetimepicker();
+    </script>
+  </body>
+</html>
